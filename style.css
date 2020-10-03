@@ -1,0 +1,63 @@
+.sideBar{
+    border-right: 1px solid; 
+    border-color: lightgrey;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 14%;
+    height: 100vh;
+    padding-left: 2%;
+}
+
+.logoImage{
+    position: relative;
+    width: 80%
+}
+
+.classroom {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    height: 10%;
+    width: 80%;
+}
+
+.className{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15%;
+}
+.vectorImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heightWidth {
+    width: 50%;
+    height: auto;
+}
+
+.heightWidthMath{
+    width: 32%;
+    height: auto;
+}
+.classroom:hover{
+    background-color: lightskyblue;
+}
+
+.miniHeader{
+    font-family: 'Open Sans', sans-serif;
+}
+.classNameText {
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+    color:black;
+}
+
+body{
+    height: 100vh;
+    
+}

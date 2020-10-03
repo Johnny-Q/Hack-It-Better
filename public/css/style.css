@@ -1,0 +1,56 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  padding: 50px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.sideBar {
+  border-right: 1px solid;
+  border-color: lightgrey;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 14%;
+  height: 100vh;
+  padding: 20px;
+}
+
+.logoImage {
+  position: relative;
+  width: 80%;
+}
+
+.classroom {
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin: 20px 0;
+}
+.classroom img {
+  width: 55px;
+  height: 55px;
+}
+.classroom h4 {
+  padding: 0 30px;
+}
+
+.classroom:hover {
+  background-color: lightskyblue;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/Johnny-Q/Hack-It-Better/issues"
   },
-  "homepage": "https://github.com/Johnny-Q/Hack-It-Better#readme",
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1"
@@ -24,4 +23,5 @@
   "devDependencies": {
     "nodemon": "^2.0.4"
   }
+  "homepage": "https://github.com/Johnny-Q/Hack-It-Better#readme"
 }

@@ -7,10 +7,13 @@
     <title>
         Hack it Better!
     </title>
-    <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="../public/css/assignments.css">
-    <link rel="stylesheet" href="../public/css/student.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/assignments.css">
+    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="css/createGroup.css">
+    <link rel="stylesheet" href="css/createticketpopup.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="js/student_dash.js" defer></script>
 </head>
 
 <body>
@@ -21,25 +24,72 @@
         <h5 class="miniHeader">Classes</h5>
 
         <div class="classroom">
-            <img class="heightWidth" src="../public/img/science_dark.png">
+            <img class="heightWidth" src="img/science_dark.png">
             <h4 class="classNameText">Science</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidthMath" src="../public/img/math_dark.png">
+            <img class="heightWidthMath" src="img/math_dark.png">
             <h4 class="classNameText">Math</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidth" src="../public/img/english_dark.png">
+            <img class="heightWidth" src="img/english_dark.png">
             <h4 class="classNameText">English</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidth" src="../public/img/money_dark.png">
+            <img class="heightWidth" src="img/money_dark.png">
             <h4 class="classNameText">Economy</h4>
         </div>
 
+    </div>
+    <div class="popup">
+        <div class="ticket-content">
+            <h1>Submit a Ticket</h1>
+            <input type="text" name="title" placeholder="Question">
+            <textarea name="body" id="" cols="20" rows="10" placeholder="Describe your problem"></textarea>
+            <div class="collumn">
+                <h1>select tags</h1>
+                <ul class="tag-container">
+                    <li class="tag">
+                        worksheet1
+                    </li>
+                    <li class="tag">
+                        worksheet1
+                    </li>
+                    <li class="tag">
+                        worksheet1
+                    </li>
+                    <li class="tag">
+                        worksheet1
+                    </li>
+                    <li class="tag">
+                        worksheet1
+                    </li>
+                    <li class="tag">
+                        worksheet1
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button class="negative">Cancel</button>
+                <button class="positive">Send</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="popup-content">
+            <input type="text" placeholder="Name of Group?">
+            <textarea name="" id="" cols="30" rows="10" placeholder="What is this group for?"></textarea>
+            <div class="invite-members">
+                <h1>invite</h1>
+            </div>
+            <div class="btn-group">
+                <button class="negative">Cancel</button>
+                <button class="positive">Create</button>
+            </div>
+        </div>
     </div>
     <main>
         <div class=studentDashboard>
@@ -66,7 +116,7 @@
             <div class="tickets">
                 <div class="submittedTickets">
                     <h3>Submitted Tickets</h3>
-                    <ul>
+                    <ul id="submittedTickets-list">
                         <li class="ticket">
                             <p class="ticket-subject">
                                 How do I solve q5?
@@ -96,7 +146,7 @@
                 </div>
                 <div class="returnedTickets">
                     <h3>Returned Tickets</h3>
-                    <ul>
+                    <ul id="returnedTickets-list">
                         <li class="ticket">
                             <p class="ticket-subject">
                                 How do I solve q5?

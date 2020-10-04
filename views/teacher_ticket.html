@@ -7,9 +7,11 @@
     <title>
         Hack it Better!
     </title>
-    <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="../public/css/assignments.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/assignments.css">
+    <link rel="stylesheet" href="css/replyTicket.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="js/teacherTicketView.js" defer></script>
 </head>
 
 <body>
@@ -20,25 +22,43 @@
         <h5 class="miniHeader">Classes</h5>
 
         <div class="classroom">
-            <img class="heightWidth" src="../public/img/science_dark.png">
+            <img class="heightWidth" src="img/science_dark.png">
             <h4 class="classNameText">Science</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidthMath" src="../public/img/math_dark.png">
+            <img class="heightWidthMath" src="img/math_dark.png">
             <h4 class="classNameText">Math</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidth" src="../public/img/english_dark.png">
+            <img class="heightWidth" src="img/english_dark.png">
             <h4 class="classNameText">English</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidth" src="../public/img/money_dark.png">
+            <img class="heightWidth" src="img/money_dark.png">
             <h4 class="classNameText">Economy</h4>
         </div>
 
+    </div>
+    <div class="popup">
+        <div class="ticket-content">
+            <h1>Reply</h1>
+            <ul class="tag-container">
+                <li class="tag">tag1</li>
+                <li class="tag">tag1</li>
+                <li class="tag">tag1</li>
+                <li class="tag">tag1</li>
+            </ul>
+            <p>BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! *DISCORD_DISCONNECT.mp3* </p>
+            <textarea name="body" id="" cols="20" rows="10" placeholder="reply here"></textarea>
+            
+            <div class="btn-group">
+                <button class="negative">Send to all Students</button>
+                <button class="positive">Reply</button>
+            </div>
+        </div>
     </div>
     <main>
         <!-- display assignments -->
@@ -49,7 +69,7 @@
             <div class="assignment-card">
                 <h3>Worksheet 1</h3>
                 <small>12 requests, 8 unique</small>
-                <ul>
+                <ul id="worksheet1-list">
                     <li class="ticket">
                         <p class="ticket-subject">
                             How do I solve q5?
@@ -80,7 +100,7 @@
             <div class="assignment-card">
                 <h3>Worksheet 2</h3>
                 <small>12 requests, 8 unique</small>
-                <ul>
+                <ul id="worksheet2-list">
                     <li class="ticket">
                         <p class="ticket-subject">
                             How do I solve q5?
@@ -111,7 +131,7 @@
             <div class="assignment-card">
                 <h3> Essay</h3>
                 <small>12 requests, 8 unique</small>
-                <ul>
+                <ul id="essay-list">
                     <li class="ticket">
                         <p class="ticket-subject">
                             How do I solve q5?

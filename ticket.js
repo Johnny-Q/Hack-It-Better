@@ -3,7 +3,7 @@ class Ticket{
     //ticket body
     //tags, tags are for an array
     //className
-    constructor(id, author, body, parentTag, childTag, className){
+    constructor(id, author, body, className, parentTag, childTag){
         this.id = id;
         this.author = author;
         this.body = body;

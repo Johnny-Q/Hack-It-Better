@@ -1,4 +1,4 @@
-function getTickets() {
+function getTickets(className) {
     var options = {
         "method": "GET"
     }
@@ -9,9 +9,9 @@ function getTickets() {
             for(var [key, ticket] of Object.entries(tickets)){
                 var{id, author, body, parentTag, childTag, className, closed, response, viewed}= ticket;
                 openTickets_teacher[className][parentTag][childTag].push(ticket);
+                unpooled_tickets.push(ticket);
             }
-
-            console.log(tickets);
+            renderTickets(className);
         });
     });
 }
@@ -57,13 +57,49 @@ function respondToTicket(id, response) {
     });
 }
 
+
+function createTicketElement(ticket){
+    var {parentTag, childTag} = ticket;
+    var ul = document.querySelector(`#${parentTag}-list`);
+    var ticketLi = createElement("li", "ticket");
+    var ticket_subject = createElement("p", "ticket-subject", childTag);
+    ticketLi.append(ticket_subject);
+
+    ul.append(ticketLi);
+}
+
+function renderTickets(className){
+    console.log(unpooled_tickets);
+    unpooled_tickets.forEach(ticket=>{
+        console.log(ticket);
+        if(ticket.className == className){
+            createTicketElement(ticket);
+        }
+    });
+}
+
+function createElement(type, clas, text=''){
+    var temp = document.createElement(type);
+    temp.classList.add(clas);
+    if(text) temp.innerText = text;
+    return temp;
+}
+
 window.onload = function () {
-    getTickets();
+    console.log("onload");
+    getTickets("math");
 };
 
 var openTickets_teacher = {
     "math": {
         "worksheet1":{
+            "q1":[],
+            "q2":[],
+            "q3":[],
+            "q4":[],
+            "q5":[]
+        },
+        "worksheet2":{
             "q1":[],
             "q2":[],
             "q3":[],
@@ -94,3 +130,4 @@ var openTickets_teacher = {
         }
     }
 };
+var unpooled_tickets = [];

@@ -1,0 +1,36 @@
+.assigments-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    .assignment-card{
+        border-radius: 35px;
+        padding: 15%;
+        height: 400px;
+        background-color: lightblue;
+        ul{
+            list-style-type: none;
+            padding: 0;
+            li{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 15px;
+                border-radius: 20px;
+            }
+            li:hover{
+                background-color: skyblue;
+            }
+        }
+    }
+    .create-assignment-card{
+        border-radius: 35px;
+        display: flex;
+        padding: 15%;
+        height: 400px;
+        background-color: lightblue;
+        justify-content: center;
+        align-items: center;
+    }
+    .create-assignment-card:hover{
+        background-color: skyblue;
+    }
+}

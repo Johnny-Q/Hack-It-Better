@@ -1,0 +1,109 @@
+.studentDashboard {
+  width: 100%;
+}
+
+.studyGroupContainer {
+  text-align: center;
+  position: relative;
+  margin: 70px auto;
+  width: 100%;
+}
+
+.scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.studyGroup {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px #999;
+  margin: 0 20px;
+  height: 125px;
+  word-break: break-word;
+  flex-basis: 125px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.studyGroup:hover {
+  background-color: skyblue;
+}
+
+.tickets {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.submittedTickets {
+  padding: 25px;
+  justify-content: center;
+  border-radius: 25px;
+  height: 800px;
+  width: 625px;
+  margin-left: 40px;
+  margin-right: 40px;
+  box-shadow: 1px 1px 10px #999;
+}
+.submittedTickets ul {
+  list-style-type: none;
+  padding: 0;
+}
+.submittedTickets ul li {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+  border-radius: 20px;
+}
+.submittedTickets ul li:hover {
+  background-color: skyblue;
+}
+
+.returnedTickets {
+  padding: 25px;
+  justify-content: center;
+  border-radius: 25px;
+  height: 800px;
+  width: 625px;
+  margin-left: 40px;
+  margin-right: 40px;
+  box-shadow: 1px 1px 10px #999;
+}
+.returnedTickets ul {
+  list-style-type: none;
+  padding: 0;
+}
+.returnedTickets ul li {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+  border-radius: 20px;
+}
+.returnedTickets ul li:hover {
+  background-color: skyblue;
+}
+
+.createTicket {
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 250px;
+  padding-left: 250px;
+}
+
+.createTicket:active {
+  background-color: lightgrey;
+}
+
+/*# sourceMappingURL=student.css.map */

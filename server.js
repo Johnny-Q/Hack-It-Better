@@ -1,5 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const io = require("socket.io")(4000);
+
 const { Ticket } = require("./ticket");
 const app = express();
 app.engine("html", require("ejs").renderFile);
@@ -10,8 +12,12 @@ app.use(bodyParser.json());
 var idCounter = 0;
 
 //views
-app.get("/", function(req, res){
+app.get("/", function (req, res) {
     res.render("test.html");
+});
+
+app.get("/chat", function (req, res) {
+    res.render("chat.html");
 });
 
 //api endpoints RESTful
@@ -43,16 +49,40 @@ app.put("/ticket", function (req, res) {
     res.sendStatus(200);
 });
 
-app.delete("/ticket", function(req, res){
+app.delete("/ticket", function (req, res) {
 
 });
 
-//realtime chatting
 
+//realtime chatting
+const groups = {};
+const users = {}
+
+io.on('connection', socket => {
+    socket.on("join-group", (groupID, name) => {
+        console.log("join-group", groupID, name);
+        socket.join(groupID);
+        socket.to(groupID).broadcast.emit("user-connected", name);
+        
+        // socket.on('new-user', name => {
+        //     users[socket.id] = name
+        //     console.log("new user", name);
+        //     socket.broadcast.emit('user-connected', name)
+        // })
+
+        socket.on('send-chat-message', message => {
+            socket.to(groupID).broadcast.emit('chat-message', { "message": message, "name": name });
+        });
+
+        // socket.on('disconnect', () => {
+        //     socket.to(groupID).broadcast.emit('user-disconnected', users[socket.id]);
+        //     delete users[socket.id];
+        // })
+    })
+});
 
 //keys would be class
 //key to array of tickets
-
 //parent tags
 //  ->child tags
 // openTickets.Math.worksheet1
@@ -60,7 +90,6 @@ app.delete("/ticket", function(req, res){
 
 //ticket id to actual ticket so we can access it better
 var tickets = {};
-
 
 app.listen(3000, function () {
     console.log("listening on http://localhost:3000");

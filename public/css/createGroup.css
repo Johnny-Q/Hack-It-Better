@@ -1,4 +1,4 @@
-.popup {
+.popup.create-group {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -11,7 +11,7 @@
   z-index: 100;
   display: none;
 }
-.popup .popup-content {
+.popup.create-group .popup-content {
   padding: 50px;
   background-color: #121212;
   width: 1000px;
@@ -22,19 +22,19 @@
   grid-template-areas: "name invite" "desc invite" "desc btn";
   column-gap: 40px;
 }
-.popup .popup-content input {
+.popup.create-group .popup-content input {
   grid-area: "name";
   align-self: center;
   width: 100%;
   height: 50px;
   outline: none;
   border: none;
-  background-color: #222222;
+  background-color: #121212;
   border-bottom: 1px solid #e2e2e2;
   font-size: 18px;
   padding: 0;
 }
-.popup .popup-content textarea {
+.popup.create-group .popup-content textarea {
   grid-area: desc;
   width: 100%;
   height: 100%;
@@ -47,26 +47,26 @@
   line-height: 1.75;
   box-sizing: border-box;
 }
-.popup .popup-content .invite-members {
+.popup.create-group .popup-content .invite-members {
   grid-area: invite;
 }
-.popup .popup-content .btn-group {
+.popup.create-group .popup-content .btn-group {
   grid-area: btn;
   justify-self: end;
   align-self: flex-end;
 }
-.popup .popup-content .btn-group button {
+.popup.create-group .popup-content .btn-group button {
   outline: none;
   border: none;
   background-color: transparent;
   padding: 16px 18px;
   font-size: 20px;
 }
-.popup .popup-content .btn-group .positive {
+.popup.create-group .popup-content .btn-group .positive {
   background-color: #BB86FC;
   color: white;
 }
-.popup .popup-content .btn-group .negative {
+.popup.create-group .popup-content .btn-group .negative {
   background-color: #CF6679;
   color: white;
 }

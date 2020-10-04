@@ -8,8 +8,9 @@
         Viral Learning!
     </title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/assignments.css">
+    <!-- <link rel="stylesheet" href="css/assignments.css"> -->
     <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="css/replyTicket.css">
     <link rel="stylesheet" href="css/createGroup.css">
     <link rel="stylesheet" href="css/createticketpopup.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -25,27 +26,27 @@
         <h5 class="miniHeader">Classes</h5>
 
         <div class="classroom">
-            <img class="heightWidth" src="img/science_dark.png">
+            <img class="heightWidth" src="img/science_light.png">
             <h4 class="classNameText">Science</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidthMath" src="img/math_dark.png">
+            <img class="heightWidthMath" src="img/math_light.png">
             <h4 class="classNameText">Math</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidth" src="img/english_dark.png">
+            <img class="heightWidth" src="img/english_light.png">
             <h4 class="classNameText">English</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidth" src="img/money_dark.png">
+            <img class="heightWidth" src="img/money_light.png">
             <h4 class="classNameText">Economy</h4>
         </div>
 
     </div>
-    <div class="popup">
+    <div class="popup create-ticket">
         <div class="ticket-content">
             <h1>Submit a Ticket</h1>
             <input type="text" name="title" placeholder="Question">
@@ -53,42 +54,62 @@
             <div class="collumn">
                 <h1>select tags</h1>
                 <ul class="tag-container">
-                    <li class="tag">
-                        worksheet1
+                    <li class="tag active">
+                        worksheet 1
                     </li>
                     <li class="tag">
-                        worksheet1
+                        question 1
                     </li>
                     <li class="tag">
-                        worksheet1
+                        question 2
+                    </li>
+                    <li class="tag active">
+                        question 3
                     </li>
                     <li class="tag">
-                        worksheet1
+                        question 4
                     </li>
                     <li class="tag">
-                        worksheet1
-                    </li>
-                    <li class="tag">
-                        worksheet1
+                        question 5;
                     </li>
                 </ul>
             </div>
             <div class="btn-group">
                 <button class="negative">Cancel</button>
-                <button class="positive">Send</button>
+                <button class="positive sendTicket">Send</button>
             </div>
         </div>
     </div>
-    <div class="popup">
+    <div class="popup create-group">
         <div class="popup-content">
-            <input type="text" placeholder="Name of Group?">
-            <textarea name="" id="" cols="30" rows="10" placeholder="What is this group for?"></textarea>
+            <input type="text" class ="group-name" placeholder="Name of Group?">
+            <textarea class="group-desc" id="" cols="30" rows="10" placeholder="What is this group for?"></textarea>
             <div class="invite-members">
                 <h1>invite</h1>
+                <h3>Matt</h3>
+                <h3>Ben</h3>
+                <h3>Johnny</h3>
             </div>
             <div class="btn-group">
                 <button class="negative">Cancel</button>
-                <button class="positive">Create</button>
+                <button class="positive addGroup">Create</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup show-response">
+        <div class="ticket-content">
+            <h1 class="ticket-subject titleOne">Reply</h1>
+            <ul class="tag-container">
+                <li class="tag">tag1</li>
+                <li class="tag">tag1</li>
+                <li class="tag">tag1</li>
+                <li class="tag">tag1</li>
+            </ul>
+            <p class="ticket-body">BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! HOLD ON BREH OH SHIT THEYRE PLAYING RANKED!!! *DISCORD_DISCONNECT.mp3* </p>
+            <textarea class="ticket-response" disabled id="" cols="20" rows="10" placeholder="reply here"></textarea>
+            
+            <div class="btn-group">
+                <button class="negative">Close</button>
             </div>
         </div>
     </div>
@@ -99,8 +120,8 @@
             <!-- display dashboard -->
             <div class="studyGroupContainer">
                 <div class="scroller">
-                    <div class="studyGroup">Create Study Group</div>
-                    <div class="studyGroup">Study Group 1</div>
+                    <div class="studyGroup createGroup">Create Study Group</div>
+                    <!-- <div class="studyGroup">Study Group 1</div>
                     <div class="studyGroup">Study Group 2</div>
                     <div class="studyGroup">Study Group 3</div>
                     <div class="studyGroup">Study Group 4</div>
@@ -110,15 +131,15 @@
                     <div class="studyGroup">Study Group 8</div>
                     <div class="studyGroup">Study Group 8</div>
                     <div class="studyGroup">Study Group 8</div>
-                    <div class="studyGroup">Study Group 8</div>
+                    <div class="studyGroup">Study Group 8</div> -->
                 </div>
             </div>
 
             <div class="tickets">
                 <div class="submittedTickets">
-                    <h3>Submitted Tickets</h3>
+                    <h3 class = smallerHeader>Submitted Tickets</h3>
                     <ul id="submittedTickets-list">
-                        <li class="ticket">
+                        <!-- <li class="ticket">
                             <p class="ticket-subject">
                                 How do I solve q5?
                             </p>
@@ -141,14 +162,14 @@
                             <p class="author">
                                 JQ-123456
                             </p>
-                        </li>
+                        </li> -->
                     </ul>
                     <button class="createTicket">Create New Ticket</button>
                 </div>
                 <div class="returnedTickets">
-                    <h3>Returned Tickets</h3>
+                    <h3 class = smallerHeader> Returned Tickets</h3>
                     <ul id="returnedTickets-list">
-                        <li class="ticket">
+                        <!-- <li class="ticket">
                             <p class="ticket-subject">
                                 How do I solve q5?
                             </p>
@@ -170,7 +191,7 @@
                             </p>
                             <p class="author">
                                 JQ-123456
-                            </p>
+                            </p> -->
                         </li>
                     </ul>
                 </div>

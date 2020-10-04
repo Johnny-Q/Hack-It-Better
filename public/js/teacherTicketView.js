@@ -5,9 +5,9 @@ function getTickets(className) {
     //fetch is api client
     fetch("/ticket", options).then(res => {
         res.json().then(tickets => {
-        //json with ids to tickets
-            for(var [key, ticket] of Object.entries(tickets)){
-                var{id, author, body, parentTag, childTag, className, closed, response, viewed}= ticket;
+            //json with ids to tickets
+            for (var [key, ticket] of Object.entries(tickets)) {
+                var { id, author, body, parentTag, childTag, className, closed, response, viewed } = ticket;
                 openTickets_teacher[className][parentTag][childTag].push(ticket);
                 unpooled_tickets.push(ticket);
             }
@@ -19,8 +19,8 @@ function getTickets(className) {
 //createTicket("johnny", "woo this is a ticket", "math", "worksheet1", "q1");
 function createTicket(author, body, className, parentTag, childTag) {
     var jsonParams = {
-        "author":author,
-        "body":body,
+        "author": author,
+        "body": body,
         "className": className,
         "parentTag": parentTag,
         "childTag": childTag
@@ -33,7 +33,7 @@ function createTicket(author, body, className, parentTag, childTag) {
         "body": JSON.stringify(jsonParams)
     };
     fetch("/ticket", options).then(res => {
-
+        
     });
 }
 
@@ -49,8 +49,9 @@ function respondToTicket(id, response) {
         },
         "body": JSON.stringify(jsonParams)
     };
-    fetch("/ticket", options).then(res=>{
-        if(res.status == 200){
+    // console.log(id, response);
+    fetch("/ticket", options).then(res => {
+        if (res.status == 200) {
             //remove locally here
 
         }
@@ -58,30 +59,33 @@ function respondToTicket(id, response) {
 }
 
 
-function createTicketElement(ticket){
-    var {parentTag, childTag} = ticket;
+function createTicketElement(ticket) {
+    var { parentTag, childTag } = ticket;
     var ul = document.querySelector(`#${parentTag}-list`);
     var ticketLi = createElement("li", "ticket");
     var ticket_subject = createElement("p", "ticket-subject", childTag);
     ticketLi.append(ticket_subject);
 
-    ul.append(ticketLi);
-}
-
-function renderTickets(className){
-    console.log(unpooled_tickets);
-    unpooled_tickets.forEach(ticket=>{
-        console.log(ticket);
-        if(ticket.className == className){
-            createTicketElement(ticket);
-        }
+    ticketLi.addEventListener("click", function (event) {
+        openReplyModal(ticket, ticketLi);
     });
+
+    ul.append(ticketLi);
+} 
+
+function renderTickets(className) {
+    console.log(unpooled_tickets);
+    for (var [key, value] of Object.entries(openTickets_teacher[className])) {
+        for (var [k1, v1] of Object.entries(value)) {
+            if (v1.legnth != 0) createTicketElement(v1[0]);
+        }
+    }
 }
 
-function createElement(type, clas, text=''){
+function createElement(type, clas, text = '') {
     var temp = document.createElement(type);
     temp.classList.add(clas);
-    if(text) temp.innerText = text;
+    if (text) temp.innerText = text;
     return temp;
 }
 
@@ -92,42 +96,68 @@ window.onload = function () {
 
 var openTickets_teacher = {
     "math": {
-        "worksheet1":{
-            "q1":[],
-            "q2":[],
-            "q3":[],
-            "q4":[],
-            "q5":[]
+        "worksheet1": {
+            "q1": [],
+            "q2": [],
+            "q3": [],
+            "q4": [],
+            "q5": []
         },
-        "worksheet2":{
-            "q1":[],
-            "q2":[],
-            "q3":[],
-            "q4":[],
-            "q5":[]
+        "worksheet2": {
+            "q1": [],
+            "q2": [],
+            "q3": [],
+            "q4": [],
+            "q5": []
         }
     },
-    "science":{
-        "worksheet1":{
-            "q1":[],
-            "q2":[],
-            "q3":[],
-            "q4":[],
-            "q5":[]
+    "science": {
+        "worksheet1": {
+            "q1": [],
+            "q2": [],
+            "q3": [],
+            "q4": [],
+            "q5": []
         }
     },
-    "geography":{
-        "worksheet1":{
-            "q1":[],
-            "q2":[],
-            "q3":[],
-            "q4":[],
-            "q5":[]
+    "geography": {
+        "worksheet1": {
+            "q1": [],
+            "q2": [],
+            "q3": [],
+            "q4": [],
+            "q5": []
         },
-        "unitTest1":{
-            "clarifications":[],
-            "reviewquestsions":[]
+        "unitTest1": {
+            "clarifications": [],
+            "reviewquestsions": []
         }
     }
 };
 var unpooled_tickets = [];
+var popup = document.querySelector(".popup");
+
+function openReplyModal(ticket, ticketLi) {
+    // var popup = document.querySelector(".popup");
+    popup.style.display = "flex";
+    document.querySelector(".ticket-subject").innerText = ticket.subject;
+    document.querySelector(".ticket-body").innerText = ticket.body;
+
+    document.querySelector(".positive").onclick = function () {
+        //do something with the ticket
+        respondToTicket(ticket.id, document.querySelector("textarea[name=body]").value);
+        document.querySelector("textarea[name=body]").value = "";
+        ticketLi.remove();
+        closeReplyModal();
+    };
+
+}
+window.onclick = function (event) {
+    if (event.target == popup) {
+        closeReplyModal();
+    }
+}
+function closeReplyModal() {
+    // var popup = document.querySelector(".popup");
+    popup.style.display = "none";
+}

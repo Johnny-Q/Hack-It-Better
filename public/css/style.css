@@ -3,6 +3,22 @@
   color: white;
 }
 
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #444;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #AAA;
+}
+
 body {
   display: flex;
   flex-direction: row;

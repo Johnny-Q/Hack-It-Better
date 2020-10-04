@@ -94,6 +94,9 @@
 .createTicket {
   background-color: transparent;
   font-family: "Open Sans", sans-serif;
+  border-radius: 25px;
+  border-width: 1px;
+  border-color: white;
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 25px;
@@ -108,13 +111,19 @@
 
 .logo {
   margin-top: 60px;
+  color: #BB86FC;
 }
 
 .miniHeader {
   margin-top: 150px;
+  color: #BB86FC;
 }
 
 .greeting {
+  color: #BB86FC;
+}
+
+.smallerHeader {
   color: #BB86FC;
 }
 

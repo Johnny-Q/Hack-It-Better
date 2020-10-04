@@ -1,26 +1,43 @@
-*{
+* {
     font-family: 'Open Sans', sans-serif;
-    color:white;
+    color: white;
 }
 
-body{
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #AAA;
+}
+
+body {
     display: flex;
     flex-direction: row;
     height: 100vh;
     overflow: hidden;
     margin: 0;
 }
-main{
+
+main {
     flex: 1;
     padding: 50px;
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color:  #121212;
+    background-color: #121212;
 }
 
-.sideBar{
-    background-color:  #242424;
+.sideBar {
+    background-color: #242424;
     position: relative;
     left: 0;
     top: 0;
@@ -29,31 +46,34 @@ main{
     padding: 20px;
 }
 
-.logoImage{
+.logoImage {
     position: relative;
     width: 80%
 }
 
-.classroom{
+.classroom {
     border-radius: 20px;
     padding: 12px;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: start;
     margin: 20px 0;
-    img{
+
+    img {
         width: 55px;
         height: 55px;
     }
-    h4{
+
+    h4 {
         padding: 0 30px;
     }
 }
-.classroom:hover{
+
+.classroom:hover {
     background-color: #121212;
 }
 
-.logo{
+.logo {
     margin-top: 60px;
 }
 

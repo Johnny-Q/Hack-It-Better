@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/studyGroup.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js" integrity="sha512-AcZyhRP/tbAEsXCCGlziPun5iFvcSUpEz2jKkx0blkYKbxU81F+iq8FURwPn1sYFeksJ+sDDrI5XujsqSobWdQ==" crossorigin="anonymous"></script>
+    <script src="js/chat.js" defer></script>
 </head>
 
 <body>
@@ -21,22 +23,22 @@
         <h5 class="miniHeader">Classes</h5>
 
         <div class="classroom">
-            <img class="heightWidth" src="img/science_dark.png">
+            <img class="heightWidth" src="img/science_light.png">
             <h4 class="classNameText">Science</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidthMath" src="img/math_dark.png">
+            <img class="heightWidthMath" src="img/math_light.png">
             <h4 class="classNameText">Math</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidth" src="img/english_dark.png">
+            <img class="heightWidth" src="img/english_light.png">
             <h4 class="classNameText">English</h4>
         </div>
 
         <div class="classroom">
-            <img class="heightWidth" src="img/money_dark.png">
+            <img class="heightWidth" src="img/money_light.png">
             <h4 class="classNameText">Economy</h4>
         </div>
     </div>
@@ -78,33 +80,26 @@
             </div>
 
             <div class="sendMessage">
-                <input type="text">
-                <button>Send</button>
+                <input type="text" class="message-input">
+                <button class="sendMessageButton">Send</button>
             </div>
 
             <div class="classmates">
-<<<<<<< HEAD
-                <h3>Members</h3>
-                <img class="classmatePFPinColumn" src="img/iconfinder_discord_3069758.png">
-                <img class="classmatePFPinColumn" src="img/iconfinder_discord_3069758.png">
-                <img class="classmatePFPinColumn" src="img/iconfinder_discord_3069758.png">
-=======
                 <h3 class = "members">Members</h3>
                 <div class = "classmatesPFP">
-                    <img class="classmatePFPinColumn" src="../public/img/iconfinder_discord_3069758.png">
+                    <img class="classmatePFPinColumn" src="img/iconfinder_discord_3069758.png">
                     <div class = "classmateName"><h4>Bobby Rossy</h4></div>
                 </div>
                 
                 <div class = "classmatesPFP">
-                    <img class="classmatePFPinColumn" src="../public/img/iconfinder_discord_3069758.png">
+                    <img class="classmatePFPinColumn" src="img/iconfinder_discord_3069758.png">
                     <div class = "classmateName"><h4>Bobby Rossy</h4></div>
                 </div>
 
                 <div class = "classmatesPFP">
-                    <img class="classmatePFPinColumn" src="../public/img/iconfinder_discord_3069758.png">
+                    <img class="classmatePFPinColumn" src="img/iconfinder_discord_3069758.png">
                     <div class = "classmateName"><h4>Bobby Rossy</h4></div>
                 </div>
->>>>>>> 043ac532d43f1be7a3e9fca8830c24416719936b
             </div>
         </div>
 

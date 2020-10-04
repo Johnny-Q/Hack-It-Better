@@ -39,11 +39,11 @@ app.get("/ticket", function (req, res) {
 
 app.post("/ticket", function (req, res) {
     //json params: author, body, tags, className
-    var { author, body, parentTag, childTag, className } = req.body;
-    tickets[idCounter] = new Ticket(idCounter, author, body,className, parentTag, childTag);
-
+    var { author, body, subject, parentTag, childTag, className } = req.body;
+    tickets[idCounter] = new Ticket(idCounter, author, subject, body, className, parentTag, childTag);
+    console.log("create ticket", subject, body);
     idCounter++;
-    res.sendStatus(200);
+    res.send(tickets[idCounter-1]);
 });
 
 app.put("/ticket", function (req, res) {
@@ -51,7 +51,7 @@ app.put("/ticket", function (req, res) {
     var { response } = req.body;
     //get id of ticket
     var { id } = req.body;
-
+    console.log(response, id);
 
     tickets[id].close(response);
 
@@ -118,12 +118,16 @@ var classes = {
 
 //ticket id to actual ticket so we can access it better
 var tickets = {};
-tickets[0] = new Ticket(0, "johnny", "alskdjfaslkdjf", "math", "worksheet1", "q1");
-tickets[1] = new Ticket(1, "johnny", "alskdjfaslkdjf", "math", "worksheet1", "q1");
-tickets[2] = new Ticket(2, "johnny", "alskdjfaslkdjf", "math", "worksheet2", "q1");
-tickets[3] = new Ticket(3, "johnny", "alskdjfaslkdjf", "math", "worksheet1", "q1");
-tickets[4] = new Ticket(4, "johnny", "alskdjfaslkdjf", "math", "worksheet2", "q1");
-tickets[5] = new Ticket(5, "johnny", "alskdjfaslkdjf", "math", "worksheet1", "q1");
+tickets[0] = new Ticket(0, "johnny", "subject", "alskdjfaslkdjf", "math", "worksheet1", "q1");
+tickets[1] = new Ticket(1, "johnny", "subject", "alskdjfaslkdjf", "math", "worksheet1", "q1");
+tickets[2] = new Ticket(2, "johnny", "subject", "alskdjfaslkdjf", "math", "worksheet2", "q1");
+tickets[3] = new Ticket(3, "johnny", "subject", "alskdjfaslkdjf", "math", "worksheet1", "q1");
+tickets[4] = new Ticket(4, "johnny", "subject", "alskdjfaslkdjf", "math", "worksheet2", "q1");
+tickets[5] = new Ticket(5, "johnny", "subject", "alskdjfaslkdjf", "math", "worksheet1", "q1");
+
+for(var i = 0;i < 6; i++){
+    tickets[i].close("reeeeee");
+}
 app.listen(3000, function () {
     console.log("listening on http://localhost:3000");
 });

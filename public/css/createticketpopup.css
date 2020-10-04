@@ -1,4 +1,4 @@
-.popup {
+.popup.create-ticket {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -11,7 +11,7 @@
   z-index: 100;
   display: none;
 }
-.popup .ticket-content {
+.popup.create-ticket .ticket-content {
   position: relative;
   background-color: #121212;
   width: 1000px;
@@ -25,7 +25,10 @@
   align-items: center;
   column-gap: 30px;
 }
-.popup .ticket-content .close-btn {
+.popup.create-ticket .ticket-content h1 {
+  grid-area: title;
+}
+.popup.create-ticket .ticket-content .close-btn {
   font-size: 40px;
   height: fit-content;
   width: fit-content;
@@ -33,18 +36,18 @@
   top: 30px;
   right: 30px;
 }
-.popup .ticket-content input {
+.popup.create-ticket .ticket-content input {
   grid-area: question;
   width: 100%;
   height: 50px;
-  background-color: #222222;
+  background-color: #121212;
   outline: none;
   border: none;
   border-bottom: 1px solid #e2e2e2;
   font-size: 18px;
   padding: 0;
 }
-.popup .ticket-content textarea {
+.popup.create-ticket .ticket-content textarea {
   grid-area: body;
   width: 100%;
   height: 100%;
@@ -57,40 +60,44 @@
   line-height: 1.75;
   box-sizing: border-box;
 }
-.popup .ticket-content .collumn {
+.popup.create-ticket .ticket-content .collumn {
   grid-area: tag;
   height: 100%;
 }
-.popup .ticket-content .collumn .tag-container {
+.popup.create-ticket .ticket-content .collumn .tag-container {
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.popup .ticket-content .collumn .tag-container .tag {
+.popup.create-ticket .ticket-content .collumn .tag-container .tag {
   border: 1px solid white;
   border-radius: 10px;
   width: fit-content;
   padding: 5px;
   margin: 5px;
 }
-.popup .ticket-content .btn-group {
+.popup.create-ticket .ticket-content .collumn .tag-container .tag.active {
+  color: #BB86FC;
+  border-color: #BB86FC;
+}
+.popup.create-ticket .ticket-content .btn-group {
   grid-area: btn;
   justify-self: end;
 }
-.popup .ticket-content .btn-group button {
+.popup.create-ticket .ticket-content .btn-group button {
   outline: none;
   border: none;
   background-color: transparent;
   padding: 16px 18px;
   font-size: 20px;
 }
-.popup .ticket-content .btn-group .positive {
+.popup.create-ticket .ticket-content .btn-group .positive {
   background-color: #BB86FC;
   color: white;
 }
-.popup .ticket-content .btn-group .negative {
+.popup.create-ticket .ticket-content .btn-group .negative {
   background-color: #CF6679;
   color: white;
 }

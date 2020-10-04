@@ -1,7 +1,6 @@
-
 function getTickets() {
     var options = {
-        "method": "GET",
+        "method": "GET"
     }
     //fetch is api client
     fetch("/ticket", options).then(res => {
@@ -38,7 +37,7 @@ function createTicket(author, body, className, parentTag, childTag) {
     });
 }
 
-function repondToTicket(id, response) {
+function respondToTicket(id, response) {
     var jsonParams = {
         "id": id,
         "response": response
@@ -53,7 +52,7 @@ function repondToTicket(id, response) {
     fetch("/ticket", options).then(res=>{
         if(res.status == 200){
             //remove locally here
-            
+
         }
     });
 }

@@ -7,7 +7,7 @@
   border-radius: 35px;
   padding: 15%;
   height: 400px;
-  background-color: lightblue;
+  background-color: #242424;
 }
 .assigments-container .assignment-card ul {
   list-style-type: none;
@@ -20,19 +20,33 @@
   border-radius: 20px;
 }
 .assigments-container .assignment-card ul li:hover {
-  background-color: skyblue;
+  background-color: #2c2c2c;
 }
 .assigments-container .create-assignment-card {
   border-radius: 35px;
   display: flex;
   padding: 15%;
   height: 400px;
-  background-color: lightblue;
+  background-color: #242424;
   justify-content: center;
   align-items: center;
 }
 .assigments-container .create-assignment-card:hover {
-  background-color: skyblue;
+  background-color: #2c2c2c;
+}
+
+.logo {
+  margin-top: 60px;
+  color: #BB86FC;
+}
+
+.miniHeader {
+  margin-top: 150px;
+  color: #BB86FC;
+}
+
+.titler {
+  color: #BB86FC;
 }
 
 /*# sourceMappingURL=assignments.css.map */

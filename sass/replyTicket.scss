@@ -8,7 +8,7 @@
 
     .ticket-content {
         position: relative;
-        background-color: white;
+        background-color: #121212;
         width: 1000px;
         height: 700px;
         padding: 30px;
@@ -37,10 +37,11 @@
             flex-direction: row;
             flex-wrap: wrap;
             .tag{
-                border: 1px solid black;
+                border: 1px solid white;
                 border-radius: 10px;
                 width: fit-content;
                 padding: 5px;
+                color: white;
                 margin: 5px;
             }
         }
@@ -76,7 +77,8 @@
             // margin: 20px 0;
             width: 100%;
             height: 100%;
-            color: rgb(94, 94, 94);
+            background-color: #222222;
+            color:white;
             border-color: rgb(226, 226, 226);
             padding: 8px;
             resize: vertical;
@@ -102,13 +104,24 @@
                 font-size: 20px;
             }
             .positive{
-                background-color: rgb(220, 241, 248);
-                color: rgb(46, 112, 255);
+                background-color:  #BB86FC;
+                color:  white;
             }
             .negative{
-                background-color:#EEE;
-                color: #222;
+                background-color:#CF6679;
+                color: white;
             }
         }
     }
+}
+.logo{
+    margin-top: 60px;
+}
+
+.miniHeader {
+    margin-top: 150px;
+}
+
+.titleOne{
+    color:#BB86FC;
 }

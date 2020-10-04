@@ -1,5 +1,6 @@
 *{
     font-family: 'Open Sans', sans-serif;
+    color:white;
 }
 
 body{
@@ -13,13 +14,13 @@ main{
     flex: 1;
     padding: 50px;
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
+    background-color:  #121212;
 }
 
 .sideBar{
-    border-right: 1px solid; 
-    border-color: lightgrey;
+    background-color:  #242424;
     position: relative;
     left: 0;
     top: 0;
@@ -49,5 +50,13 @@ main{
     }
 }
 .classroom:hover{
-    background-color: lightskyblue;
+    background-color: #121212;
+}
+
+.logo{
+    margin-top: 60px;
+}
+
+.miniHeader {
+    margin-top: 150px;
 }

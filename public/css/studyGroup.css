@@ -7,7 +7,7 @@
   grid-template-areas: "title mates" "messages mates" "send mates";
   box-sizing: border-box;
   border-radius: 25px;
-  box-shadow: 1px 1px 10px #999;
+  background-color: #1e1e1e;
   padding: 30px;
   column-gap: 20px;
 }
@@ -35,7 +35,7 @@
   align-items: center;
   flex-direction: row;
   height: 125px;
-  box-shadow: 1px 1px 5px #999;
+  background-color: #242424;
   width: 800px;
 }
 
@@ -62,7 +62,7 @@ input {
   width: 800px;
   height: 50px;
   border-color: transparent;
-  box-shadow: 1px 1px 5px #999;
+  background-color: #2c2c2c;
   border-radius: 5px;
 }
 
@@ -72,12 +72,12 @@ button {
   height: 55px;
   width: 55px;
   border-color: transparent;
-  box-shadow: 1px 1px 5px #999;
+  background-color: #BB86FC;
   border-radius: 5px;
 }
 
 button:active {
-  background-color: lightgrey;
+  background-color: #c69ff7;
 }
 
 .classmates {
@@ -89,7 +89,37 @@ button:active {
   width: 70%;
   height: 100%;
   grid-area: mates;
-  box-shadow: 1px 1px 10px #999;
+  background-color: #242424;
+}
+.classmates .classmatesPFP {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  height: 100px;
+}
+.classmates .classmatesPFP img {
+  margin: 0;
 }
 
-/*# sourceMappingURL=studygroup.css.map */
+.logo {
+  margin-top: 60px;
+  color: #BB86FC;
+}
+
+.miniHeader {
+  margin-top: 150px;
+  color: #BB86FC;
+}
+
+.members {
+  color: #BB86FC;
+}
+
+.chemGroup {
+  color: #BB86FC;
+}
+
+/*# sourceMappingURL=studyGroup.css.map */

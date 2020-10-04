@@ -13,7 +13,7 @@
 
     .popup-content {
         padding: 50px;
-        background-color: white;
+        background-color: #121212;
         width: 1000px;
         height: 500px;
 
@@ -33,6 +33,7 @@
             height: 50px;
             outline: none;
             border: none;
+            background-color:#222222;
             border-bottom: 1px solid rgb(226, 226, 226);
             font-size: 18px;
             padding: 0;
@@ -43,7 +44,8 @@
             // margin: 20px 0;
             width: 100%;
             height: 100%;
-            color: rgb(94, 94, 94);
+            background-color: #222222;
+            color: white;
             border-color: rgb(226, 226, 226);
             padding: 8px;
             resize: vertical;
@@ -69,16 +71,26 @@
                 font-size: 20px;
             }
 
-            .positive {
-                background-color: rgb(220, 241, 248);
-                color: rgb(46, 112, 255);
+            .positive{
+                background-color:  #BB86FC;
+                color:  white;
             }
-
-            .negative {
-                background-color: #EEE;
-                color: #222;
+            .negative{
+                background-color:#CF6679;
+                color: white;
             }
 
         }
     }
+}
+
+.logo{
+    margin-top: 60px;
+}
+
+.miniHeader {
+    margin-top: 150px;
+}
+.headerThree{
+    color:#BB86FC;
 }

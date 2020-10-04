@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  box-shadow: 1px 1px 10px #999;
+  background-color: #222222;
   margin: 0 20px;
   height: 125px;
   word-break: break-word;
@@ -34,7 +34,7 @@
 }
 
 .studyGroup:hover {
-  background-color: skyblue;
+  background-color: #BB86FC;
 }
 
 .tickets {
@@ -51,7 +51,7 @@
   width: 625px;
   margin-left: 40px;
   margin-right: 40px;
-  box-shadow: 1px 1px 10px #999;
+  background-color: #222222;
 }
 .submittedTickets ul {
   list-style-type: none;
@@ -64,7 +64,7 @@
   border-radius: 20px;
 }
 .submittedTickets ul li:hover {
-  background-color: skyblue;
+  background-color: #BB86FC;
 }
 
 .returnedTickets {
@@ -75,7 +75,7 @@
   width: 625px;
   margin-left: 40px;
   margin-right: 40px;
-  box-shadow: 1px 1px 10px #999;
+  background-color: #222222;
 }
 .returnedTickets ul {
   list-style-type: none;
@@ -88,7 +88,7 @@
   border-radius: 20px;
 }
 .returnedTickets ul li:hover {
-  background-color: skyblue;
+  background-color: #BB86FC;
 }
 
 .createTicket {
@@ -103,7 +103,19 @@
 }
 
 .createTicket:active {
-  background-color: lightgrey;
+  background-color: #BB86FC;
+}
+
+.logo {
+  margin-top: 60px;
+}
+
+.miniHeader {
+  margin-top: 150px;
+}
+
+.greeting {
+  color: #BB86FC;
 }
 
 /*# sourceMappingURL=student.css.map */
